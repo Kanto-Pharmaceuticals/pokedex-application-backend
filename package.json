@@ -1,5 +1,5 @@
 {
-  "name": "Pokedex-backend",
+  "name": "pokedex-application-backend",
   "version": "0.1.0",
   "description": "The Pokedex in a typical PERN stack to catalogue and provide data on all the species of Pokémon featured in the video game, anime and manga series",
   "main": "server.js",
