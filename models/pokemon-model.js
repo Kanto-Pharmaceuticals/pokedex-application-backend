@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const { boolean } = require("webidl-conversions");
+const mongoose = require("mongoose")
+const { boolean } = require("webidl-conversions")
 
 const pokemonSchema = mongoose.Schema(
   {
@@ -8,7 +8,7 @@ const pokemonSchema = mongoose.Schema(
       required: true,
       ref: "Trainer",
     },
-    text: {
+    name: {
       type: String,
       required: [false, "Please add a text value"],
     },
@@ -16,5 +16,5 @@ const pokemonSchema = mongoose.Schema(
   {
     timestamps: true,
   }
-);
-module.exports = mongoose.model("Pokemon", pokemonSchema);
+)
+module.exports = mongoose.model("Pokemon", pokemonSchema)
