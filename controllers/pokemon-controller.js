@@ -13,7 +13,7 @@ const getPokemon = asyncHandler(async (req, res) => {
 
 /* @route SET /api/pokemon */
 const setPokemon = asyncHandler(async (req, res) => {
-  if (!req.body.name) {
+  if (!req.body.name || !req.body.species) {
     res.status(400)
     throw new Error("Please add a Pokémon to set")
   }
@@ -21,6 +21,7 @@ const setPokemon = asyncHandler(async (req, res) => {
   const pokemon = await Pokemon.create({
     name: req.body.name,
     trainer: req.trainer.id,
+    species: req.body.species,
   })
 
   res.status(200).json(pokemon)

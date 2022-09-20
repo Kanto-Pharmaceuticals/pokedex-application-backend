@@ -10,7 +10,11 @@ const pokemonSchema = mongoose.Schema(
     },
     name: {
       type: String,
-      required: [false, "Please add a text value"],
+      required: [false, "Please add a name value"],
+    },
+    species: {
+      type: String,
+      require: [true, "Please add a species value"],
     },
   },
   {
